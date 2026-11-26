@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=VulkanScope Pro
+Comment=Real-time Vulkan CRT Phosphor Oscilloscope & 3D Waterfall Mastering Analyzer
+Exec=vulkanscope-pro
+Icon=io.github.vulkanscope.VulkanScopePro
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Music;Engineering;
+Keywords=audio;oscilloscope;spectrogram;fft;pipewire;vulkan;mastering;lufs;
+StartupWMClass=io.github.vulkanscope.VulkanScopePro

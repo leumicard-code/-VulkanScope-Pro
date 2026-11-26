@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vulkanscope.VulkanScopePro</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>VulkanScope Pro</name>
+  <summary>Real-time Vulkan CRT phosphor oscilloscope and 3D waterfall mastering analyzer</summary>
+  <description>
+    <p>
+      VulkanScope Pro is a native, GPU-accelerated audio mastering and analysis suite for Linux built with Rust, Vulkan (wgpu), and PipeWire.
+    </p>
+    <ul>
+      <li>8192-point GPU Compute Shader FFT with logarithmic frequency mapping (20 Hz – 20 kHz) and pink-noise mastering tilt</li>
+      <li>HDR CRT Phosphor XY Oscilloscope with velocity-modulated electron-beam persistence and 45° Mid/Side vectorscope rotation</li>
+      <li>Real-time 3D Spectrogram Waterfall with studio lighting, contour markers, 4 color palettes, and HDR bloom</li>
+      <li>EBU R128 Momentary and Short-Term LUFS, True Peak (dBTP), L/R peak/RMS meters, and Phase Correlation</li>
+      <li>Lock-free real-time PipeWire capture with live sink and application node switching</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.vulkanscope.VulkanScopePro.desktop</launchable>
+  <developer id="io.github.vulkanscope">
+    <name>VulkanScope Contributors</name>
+  </developer>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-11-26">
+      <description>
+        <p>Initial release with PipeWire capture, 8192-point Vulkan Compute FFT, HDR Phosphor XY CRT scope, 3D Waterfall, and EBU R128 mastering meters.</p>
+      </description>
+    </release>
+  </releases>
+</component>

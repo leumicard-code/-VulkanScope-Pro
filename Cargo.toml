@@ -1,0 +1,35 @@
+[package]
+name = "vulkanscope-pro"
+version = "0.1.0"
+edition = "2024"
+description = "Real-time Vulkan GPU audio mastering suite: CRT Phosphor XY Oscilloscope, 8192-pt Compute FFT, and 3D Spectrogram Waterfall for PipeWire."
+license = "MIT"
+
+[dependencies]
+wgpu = "30.0"
+winit = "0.30"
+egui = { version = "0.37", features = ["default_fonts"] }
+egui-wgpu = "0.37"
+egui-winit = "0.37"
+pipewire = { version = "0.10", features = ["v0_3_44"] }
+rtrb = "0.4"
+ebur128 = "0.1"
+glam = "0.34"
+bytemuck = { version = "1.25", features = ["derive"] }
+pollster = "0.4"
+env_logger = "0.11"
+log = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[package.metadata.rpm]
+package = "vulkanscope-pro"
+
+[package.metadata.rpm.cargo]
+buildflags = ["--release"]
+
+[package.metadata.rpm.targets]
+vulkanscope-pro = { path = "/usr/bin/vulkanscope-pro" }

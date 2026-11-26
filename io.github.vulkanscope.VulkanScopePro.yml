@@ -1,0 +1,33 @@
+app-id: io.github.vulkanscope.VulkanScopePro
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.llvm18
+command: vulkanscope-pro
+
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --filesystem=xdg-run/pipewire-0
+
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm18/bin
+  env:
+    CARGO_HOME: /run/build/vulkanscope-pro/cargo
+    LIBCLANG_PATH: /usr/lib/sdk/llvm18/lib
+
+modules:
+  - name: vulkanscope-pro
+    buildsystem: simple
+    build-commands:
+      - cargo build --release --offline
+      - install -Dm755 target/release/vulkanscope-pro /app/bin/vulkanscope-pro
+      - install -Dm644 assets/io.github.vulkanscope.VulkanScopePro.desktop /app/share/applications/io.github.vulkanscope.VulkanScopePro.desktop
+      - install -Dm644 assets/io.github.vulkanscope.VulkanScopePro.svg /app/share/icons/hicolor/scalable/apps/io.github.vulkanscope.VulkanScopePro.svg
+    sources:
+      - type: dir
+        path: ..
