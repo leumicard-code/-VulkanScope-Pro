@@ -1,4 +1,7 @@
 # VulkanScope Pro
+<img width="260" height="100" alt="Vulkan_White_100px_Dec16" src="https://github.com/user-attachments/assets/f59ef502-3fb4-451e-b1ad-73f762001db8" />
+
+
 <img width="1120" height="983" alt="66y" src="https://github.com/user-attachments/assets/ae885729-e16c-4988-b0df-53494c289004" />
 
 
